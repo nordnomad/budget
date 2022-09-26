@@ -3,23 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_activity_toolbar"
+        popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-N
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
-    </ListView>
+    <!--    <ListView-->
+    <!--        android:id="@+id/list_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true">-->
+    <!--    </ListView>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/list_item" />
 </LinearLayout>
